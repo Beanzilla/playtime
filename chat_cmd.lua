@@ -9,9 +9,9 @@ minetest.register_chatcommand("playtime", {
         if param == "" then
             param = name
         end
-        if minetest.get_player_by_name(param) == nil then
+        --[[if minetest.get_player_by_name(param) == nil then
             return false, "Player not found."
-        end
+        end]]
         local struct = playtime.get(param)
         if struct.session == 0 and struct.total == 0 then
             return false, "Player not found."
@@ -31,9 +31,9 @@ minetest.register_chatcommand("pt", {
         if param == "" then
             param = name
         end
-        if minetest.get_player_by_name(param) == nil then
+        --[[if minetest.get_player_by_name(param) == nil then
             return false, "Player not found."
-        end
+        end]]
         local struct = playtime.get(param)
         if struct.session == 0 and struct.total == 0 then
             return false, "Player not found."
